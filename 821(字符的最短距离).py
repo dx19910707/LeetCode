@@ -22,8 +22,3 @@ class Solution(object):
         for i in range(len(S[next_index+1:])):
             l.append(i+1)
         return l
-
-s = 'baab'
-c = 'b'
-print(Solution().shortestToChar(s,c))
-print(len(s))
