@@ -18,3 +18,20 @@ class Solution(object):
             else:
                 d[c - i**2] = i**2
         return False
+
+    def judgeSquareSum2(self, c):
+        """
+        :type c: int
+        :rtype: bool
+        """
+        from math import sqrt
+        i = 0
+        j = int(sqrt(c))
+        while i <= j:
+            if i**2 + j**2 < c:
+                i += 1
+            elif i**2 + j**2 > c:
+                j -=1
+            else:
+                return True
+        return False
