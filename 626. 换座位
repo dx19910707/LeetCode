@@ -1,0 +1,2 @@
+SELECT CASE WHEN id %2 = 0 THEN id-1 WHEN id = (SELECT MAX(id) FROM seat) THEN id ELSE id+1 END AS id,student FROM seat ORDER BY id ASC;
+SELECT IF(id=(SELECT MAX(id)) FROM seat,IF(id%2=0,id-1,id),IF(id%2=0,id-1,id+1)) AS id,student FROM seat ORDER BY id ASC;
