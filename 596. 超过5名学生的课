@@ -1,0 +1,1 @@
+SELECT class FROM (SELECT DISTINCT * FROM courses) t GROUP BY class HAVING COUNT(class)>4;
