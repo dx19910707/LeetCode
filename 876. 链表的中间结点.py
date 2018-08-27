@@ -24,3 +24,10 @@ class Solution:
 
         print(res.val)
         return res
+
+    def middleNode2(self, head):
+        slow = fast = head
+        while fast and fast.next:
+            slow = fast.next
+            fast = fast.next.next
+        return slow
