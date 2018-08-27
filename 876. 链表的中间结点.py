@@ -28,6 +28,6 @@ class Solution:
     def middleNode2(self, head):
         slow = fast = head
         while fast and fast.next:
-            slow = fast.next
+            slow = slow.next
             fast = fast.next.next
         return slow
