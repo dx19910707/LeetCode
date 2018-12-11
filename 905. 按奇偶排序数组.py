@@ -14,3 +14,7 @@ class Solution(object):
                 odd_list.append(i)
         even_list.extend(odd_list)
         return even_list
+
+    def sortArrayByParity2(self, A):
+        # 一行解决，76ms
+        return list(sorted(A, key=lambda x: x % 2 != 0))
