@@ -15,3 +15,15 @@ class Solution(object):
                 copy_a[odd_index] = i
                 odd_index += 2
         return copy_a
+
+    def sortArrayByParityII2(self, A):
+        # 不需要多余的空间，180ms
+        even, odd = 0, 1
+        while even < len(A) and odd < len(A):
+            if A[even] % 2 != 0:
+                A[even], A[odd] = A[odd], A[even]
+                odd += 2
+            else:
+                even += 2
+        return A
+
